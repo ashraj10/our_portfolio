@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./assets/styles.css";
+import "./assets/css/styles.css";
 
 import Navbar from "./components/navbar/page";
 
@@ -22,7 +22,30 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+          rel="stylesheet"
+        />
         <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              tailwind.config = {
+                theme: {
+                  extend: {
+                    fontFamily: {
+                      'manrope': ['Manrope', 'sans-serif'],
+                      'geist-sans': ['var(--font-geist-sans)'],
+                      'geist-mono': ['var(--font-geist-mono)'],
+                    }
+                  }
+                }
+              }
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
