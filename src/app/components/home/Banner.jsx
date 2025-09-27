@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 
 export default function HeroBanner() {
   return (
-    <section className="relative flex items-center mt-16 justify-center h-screen bg-[#373669] overflow-hidden">
+    <section className="relative flex items-center mt-16 justify-center h-screen overflow-hidden bg-gradient-to-br from-[#190341] via-[#2a075c] to-[#451181]">
+      {/* Optional glowing effects */}
+      <div className="absolute w-96 h-96 bg-purple-500 opacity-30 rounded-full blur-[120px] top-10 left-10 z-0"></div>
+      <div className="absolute w-80 h-80 bg-pink-500 opacity-20 rounded-full blur-[100px] bottom-20 right-10 z-0"></div>
+
       <div className="relative z-10 text-center text-white px-6 max-w-6xl text-lg">
         <motion.p
           initial={{ opacity: 0, y: -20 }}
@@ -23,7 +27,7 @@ export default function HeroBanner() {
         >
           DESIGN DEVELOP
           <br />
-          DELIVER{" "}
+          DELIVER
         </motion.h1>
 
         <motion.p
