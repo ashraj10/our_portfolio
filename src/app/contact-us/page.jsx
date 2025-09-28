@@ -125,7 +125,7 @@ const ContactPage = () => {
                 <h3 className="text-4xl font-bold text-gray-900 mb-6">
                   Start Your Project
                 </h3>
-                <p className="text-gray-600 text-xl leading-relaxed">
+                <p className="text-gray-600 text-2xl leading-relaxed">
                   Fill out the form below and let's discuss your project.
                 </p>
 
@@ -191,7 +191,7 @@ const ContactPage = () => {
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
                   Contact Info
                 </h3>
-                <p className="text-gray-700 text-lg leading-relaxed space-y-2">
+                <p className="text-gray-700 text-2xl leading-relaxed space-y-2">
                   <span className="flex items-center space-x-2">
                     <Phone className="h-5 w-5 text-purple-600" />
                     <span>+1 (555) 123-4567</span>
@@ -209,7 +209,7 @@ const ContactPage = () => {
 
               <div className="bg-gradient-to-br from-purple-600 to-blue-600 text-white rounded-3xl shadow-2xl p-10">
                 <h3 className="text-3xl font-bold mb-6">Why Choose Us?</h3>
-                <ul className="space-y-4 text-lg">
+                <ul className="space-y-4 text-2xl">
                   <li>✔ 500+ Projects Delivered</li>
                   <li>✔ 98% Client Satisfaction</li>
                   <li>✔ 2 Hours Response Time</li>

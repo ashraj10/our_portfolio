@@ -120,7 +120,7 @@ img {
 input,
 button {
   background: none;
-  border: none;
+  border: 1px solid;
   font: inherit;
 }
 
@@ -142,7 +142,7 @@ address {
 
 html {
   font-family: var(--ff-manrope);
-  font-size: 10px;
+  font-size: 12px;
   scroll-behavior: smooth;
 }
 
@@ -829,6 +829,7 @@ body.nav-active {
 
 .input-field::placeholder {
   color: inherit;
+  font-size: 1.5rem;
 }
 
 .submit-btn {
