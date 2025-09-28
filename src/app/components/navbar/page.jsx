@@ -69,6 +69,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav Links */}
+        {/* changes */}
         <ul className="flex flex-col p-6 space-y-4">
           {navLinks.map((link) => (
             <li key={link}>
