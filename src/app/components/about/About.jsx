@@ -45,11 +45,11 @@ export default function About() {
         </figure>
 
         <div className="about-content">
-          <p className="section-subtitle" id="about-label">
+          <p className="section-subtitle text-[#373669]" id="about-label">
             Why Choose Us?
           </p>
 
-          <h2 className="h2 section-title">
+          <h2 className="h2 section-title ">
             We bring solutions to make life easier for our clients.
           </h2>
 

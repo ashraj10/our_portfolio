@@ -12,18 +12,15 @@ import {
 const Footer = () => {
   return (
     <>
-      <section className="cta" aria-label="call to action">
+      <section className="cta bg-custom-gradient" aria-label="call to action">
         <div className="container">
           <h2 className="h2 section-title">
             Join our community by using our services and grow your business.
           </h2>
-          <Link href="#" className="btn btn-primary">
-            Try it For Free
-          </Link>
         </div>
       </section>
 
-      <footer className="footer">
+      <footer className="footer bg-custom-gradient  ">
         <div className="container grid-list">
           <div className="footer-brand">
             <Link href="#" className="logo">
@@ -122,7 +119,7 @@ const Footer = () => {
               you.
             </p>
 
-            <form action="" className="input-wrapper">
+            <form action="" className="input-wrapper  ">
               <input
                 type="email"
                 name="email_address"
@@ -130,7 +127,10 @@ const Footer = () => {
                 required
                 className="input-field"
               />
-              <button type="submit" className="submit-btn">
+              <button
+                type="submit"
+                className="submit-btn bg-gray-100 text-[#373669]"
+              >
                 Join
               </button>
             </form>

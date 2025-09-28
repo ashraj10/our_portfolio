@@ -25,7 +25,7 @@ export default function Feature() {
         </figure>
 
         <div className="feature-content">
-          <p className="section-subtitle" id="feature-label">
+          <p className="section-subtitle text-[#373669]" id="feature-label">
             Our Solutions
           </p>
 

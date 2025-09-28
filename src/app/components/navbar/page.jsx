@@ -2,19 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about-us" },
-    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "/our-services" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "/contact-us" },
   ];
+
+  const linkClass = (href) =>
+    pathname === href
+      ? "text-blue-600 font-bold transition-colors duration-300"
+      : "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300";
 
   return (
     <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
@@ -29,7 +35,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
+              className={linkClass(link.href)}
             >
               {link.name}
             </Link>
@@ -81,7 +87,7 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-800 hover:text-blue-600 font-medium transition-colors duration-300"
+                className={linkClass(link.href)}
               >
                 {link.name}
               </Link>

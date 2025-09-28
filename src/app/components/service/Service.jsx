@@ -8,9 +8,9 @@ import {
 
 export default function Service() {
   return (
-    <section className="section service" aria-labelledby="service-label">
+    <section className="section service " aria-labelledby="service-label">
       <div className="container">
-        <p className="section-subtitle" id="service-label">
+        <p className="section-subtitle text-[#373669]" id="service-label">
           What We Do?
         </p>
         <h2 className="h2 section-title">
@@ -18,8 +18,8 @@ export default function Service() {
         </h2>
         <ul className="grid-list">
           <li>
-            <div className="service-card">
-              <div className="card-icon">
+            <div className="service-card ">
+              <div className="card-icon bg-custom-gradient">
                 <IoCall aria-hidden="true" />
               </div>
               <h3 className="h4 card-title">24/7 Support</h3>
@@ -35,7 +35,7 @@ export default function Service() {
           </li>
           <li>
             <div className="service-card">
-              <div className="card-icon">
+              <div className="card-icon bg-custom-gradient">
                 <IoShieldCheckmark aria-hidden="true" />
               </div>
               <h3 className="h4 card-title">Secure Payments</h3>
@@ -51,7 +51,7 @@ export default function Service() {
           </li>
           <li>
             <div className="service-card">
-              <div className="card-icon">
+              <div className="card-icon bg-custom-gradient">
                 <IoCloudDownload aria-hidden="true" />
               </div>
               <h3 className="h4 card-title">Daily Updates</h3>
@@ -67,7 +67,7 @@ export default function Service() {
           </li>
           <li>
             <div className="service-card">
-              <div className="card-icon">
+              <div className="card-icon bg-custom-gradient">
                 <IoPieChart aria-hidden="true" />
               </div>
               <h3 className="h4 card-title">Market Research</h3>

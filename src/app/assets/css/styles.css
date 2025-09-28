@@ -1166,3 +1166,13 @@ body.nav-active {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+.bg-custom-gradient {
+  background: linear-gradient(to right, #312e81, #581c87);
+  color: white; /* text white for contrast */
+  padding: 0.5rem 1rem; /* optional padding */
+  border-radius: 0.375rem; /* optional rounded corners */
+  border: none; /* remove default button border */
+  cursor: pointer; /* pointer on hover */
+  transition: background 0.3s ease;
+}

@@ -40,7 +40,7 @@ export default function Projects() {
   return (
     <section className="section project" aria-labelledby="project-label">
       <div className="container">
-        <p className="section-subtitle" id="project-label">
+        <p className="section-subtitle text-[#373669]" id="project-label">
           Case Studies
         </p>
         <h2 className="h2 section-title">
