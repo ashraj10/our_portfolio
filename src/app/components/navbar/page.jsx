@@ -8,7 +8,13 @@ import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = ["Home", "About", "Services", "Projects", "Contact"];
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "/contact-us" },
+  ];
 
   return (
     <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
@@ -21,11 +27,11 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
-              key={link}
-              href="#"
+              key={link.name}
+              href={link.href}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
             >
-              {link}
+              {link.name}
             </Link>
           ))}
         </nav>
@@ -69,16 +75,15 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav Links */}
-        {/* changes */}
         <ul className="flex flex-col p-6 space-y-4">
           {navLinks.map((link) => (
-            <li key={link}>
+            <li key={link.name}>
               <Link
-                href="#"
+                href={link.href}
                 onClick={() => setIsOpen(false)}
                 className="block text-gray-800 hover:text-blue-600 font-medium transition-colors duration-300"
               >
-                {link}
+                {link.name}
               </Link>
             </li>
           ))}
