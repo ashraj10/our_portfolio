@@ -120,7 +120,6 @@ img {
 input,
 button {
   background: none;
-  border: 1px solid;
   font: inherit;
 }
 

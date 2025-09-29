@@ -4,6 +4,14 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, Code2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
+const whyChooseUs = [
+  "✔ 500+ Projects Delivered",
+  "✔ 98% Client Satisfaction",
+  "✔ 2 Hours Response Time",
+  "✔ 8+ Years Experience",
+  "✔ 25+ Experts Team<",
+];
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -210,11 +218,9 @@ const ContactPage = () => {
               <div className="bg-gradient-to-br from-purple-600 to-blue-600 text-white rounded-3xl shadow-2xl p-10">
                 <h3 className="text-3xl font-bold mb-6">Why Choose Us?</h3>
                 <ul className="space-y-4 text-2xl">
-                  <li>✔ 500+ Projects Delivered</li>
-                  <li>✔ 98% Client Satisfaction</li>
-                  <li>✔ 2 Hours Response Time</li>
-                  <li>✔ 8+ Years Experience</li>
-                  <li>✔ 25+ Experts Team</li>
+                  {whyChooseUs.map((item) => (
+                    <li>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
