@@ -24,11 +24,11 @@ const Footer = () => {
         <div className="container grid-list">
           <div className="footer-brand">
             <Link href="#" className="logo">
-              ITAgency
+              QueueSpace IT
             </Link>
 
             <p className="footer-text">
-              &copy; 2022 codewithsadee. <br /> All rights reserved.
+              &copy; 2022 All rights reserved.
             </p>
 
             <ul className="social-list">
@@ -70,7 +70,7 @@ const Footer = () => {
               </address>
             </li>
             <li>
-              <a href="mailto:info@email.com" className="footer-link">
+              <a href="mailto:info@queuespaceit.com" className="footer-link">
                 info@queuespaceit.com
               </a>
             </li>
@@ -90,16 +90,16 @@ const Footer = () => {
                 About Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="#" className="footer-link">
                 Our Story
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href="#" className="footer-link">
                 Projects
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="#" className="footer-link">
                 Terms of Use
