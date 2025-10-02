@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import logo from "../../assets/images/logo.jpeg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,8 @@ export default function Navbar() {
     <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
       <div className="container mx-auto flex items-center justify-between p-4 md:px-8">
         <Link href="#" className="flex items-center space-x-2">
-          <span className="font-bold text-xl text-gray-800">ITAgency</span>
+          {/* <span className="font-bold text-xl text-gray-800">ITAgency</span> */}
+          <img src={logo} alt="QueueSpace IT" className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Navbar */}

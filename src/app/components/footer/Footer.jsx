@@ -66,17 +66,17 @@ const Footer = () => {
             </li>
             <li>
               <address className="footer-text">
-                Moonshine St. 14/05 Light City, London, United Kingdom
+                {/* Moonshine St. 14/05 Light City, London, United Kingdom */}
               </address>
             </li>
             <li>
               <a href="mailto:info@email.com" className="footer-link">
-                info@email.com
+                info@queuespaceit.com
               </a>
             </li>
             <li>
               <a href="tel:001234567890" className="footer-link">
-                00 (123) 456 78 90
+                
               </a>
             </li>
           </ul>
