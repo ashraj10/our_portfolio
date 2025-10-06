@@ -67,25 +67,24 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer bg-gradient-to-b from-gray-900 to-black py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <Link href="#" className="logo inline-block">
-              <Image
-                src={logo}
-                alt="QueueSpaceIT Logo"
-                width={140}
-                height={140}
-                priority
-                className="w-auto object-contain hover:scale-105 transition-transform duration-300"
-              />
+    <>
+      <section className="cta bg-custom-gradient" aria-label="call to action">
+        <div className="container">
+          <h2 className="h2 section-title">
+            Join our community by using our services and grow your business.
+          </h2>
+        </div>
+      </section>
+
+      <footer className="footer bg-custom-gradient  ">
+        <div className="container grid-list">
+          <div className="footer-brand">
+            <Link href="#" className="logo">
+              ITAgency
             </Link>
 
-            <p className="text-gray-400 leading-relaxed">
-              Your trusted partner for innovative web development, mobile apps,
-              and digital solutions that drive business growth.
+            <p className="footer-text">
+              &copy; 2022 codewithsadee. <br /> All rights reserved.
             </p>
 
             <div>
@@ -172,14 +171,63 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-white font-bold text-xl mb-6 relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-12 after:h-1 after:bg-[#373669]">
-              Newsletter
-            </h4>
-            <p className="text-gray-400 leading-relaxed mb-6">
-              Subscribe to our newsletter to get the latest updates, exclusive
-              deals, and industry insights delivered to your inbox.
+          <ul className="footer-list">
+            <li>
+              <p className="h4 footer-list-title">Get in Touch</p>
+            </li>
+            <li>
+              <address className="footer-text">
+                Moonshine St. 14/05 Light City, London, United Kingdom
+              </address>
+            </li>
+            <li>
+              <a href="mailto:info@email.com" className="footer-link">
+                info@email.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:001234567890" className="footer-link">
+                00 (123) 456 78 90
+              </a>
+            </li>
+          </ul>
+
+          <ul className="footer-list">
+            <li>
+              <p className="h4 footer-list-title">Learn More</p>
+            </li>
+            <li>
+              <Link href="#" className="footer-link">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="footer-link">
+                Our Story
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="footer-link">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="footer-link">
+                Terms of Use
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="footer-link">
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
+
+          <div className="footer-list">
+            <p className="h4 footer-list-title">Our Newsletter</p>
+            <p className="footer-text">
+              Subscribe to our newsletter to get our news & deals delivered to
+              you.
             </p>
 
             <form className="space-y-4">

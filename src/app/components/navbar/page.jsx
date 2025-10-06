@@ -4,8 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import logo from "../../assets/images/logo_bg_remove.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +13,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about-us" },
     { name: "Services", href: "/our-services" },
-    { name: "Projects", href: "/projects" },
+    // { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact-us" },
   ];
 
@@ -25,18 +23,10 @@ export default function Navbar() {
       : "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300";
 
   return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md">
-      <div className="max-w-[90rem] mx-auto flex items-center justify-between px-4 md:px-10 py-3">
-        {/* ✅ Responsive Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src={logo}
-            alt="QueueSpaceIT Logo"
-            width={200} // base size
-            height={80}
-            priority
-            className="w-auto h-10 sm:h-12 md:h-14 lg:h-20 xl:h-24 object-contain"
-          />
+    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
+      <div className="container mx-auto flex items-center justify-between p-4 md:px-8">
+        <Link href="#" className="flex items-center space-x-2">
+          <span className="font-bold text-xl text-gray-800">ITAgency</span>
         </Link>
 
         {/* ✅ Desktop Navbar */}
