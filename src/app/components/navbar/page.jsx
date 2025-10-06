@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import logo from "../../assets/images/logo_bg_remove.png";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +25,16 @@ export default function Navbar() {
       : "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300";
 
   return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
-      <div className="container mx-auto flex items-center justify-between p-4 md:px-8">
-        <Link href="#" className="flex items-center space-x-2">
-          <span className="font-bold text-xl text-gray-800">ITAgency</span>
+    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md ">
+      <div className="container mx-auto flex items-center justify-between  md:px-8">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src={logo}
+            alt="QueueSpaceIT Logo"
+            width={100}
+            height={50}
+            priority
+          />
         </Link>
 
         {/* ✅ Desktop Navbar */}
