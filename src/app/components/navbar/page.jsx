@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import logo from "../../assets/images/logo_bg_remove.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +25,22 @@ export default function Navbar() {
       : "text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300";
 
   return (
-    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md py-4">
-      <div className="container mx-auto flex items-center justify-between p-4 md:px-8">
-        <Link href="#" className="flex items-center space-x-2">
-          <span className="font-bold text-xl text-gray-800">ITAgency</span>
+    <header className="fixed w-full top-0 left-0 z-50 bg-white shadow-md">
+      <div className="max-w-[90rem] mx-auto flex items-center justify-between px-4 md:px-10 py-3">
+        {/* ✅ Responsive Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src={logo}
+            alt="QueueSpaceIT Logo"
+            width={200} // base size
+            height={80}
+            priority
+            className="w-auto h-10 sm:h-12 md:h-14 lg:h-20 xl:h-24 object-contain"
+          />
         </Link>
 
-        {/* Desktop Navbar */}
-        <nav className="hidden md:flex items-center space-x-6">
+        {/* ✅ Desktop Navbar */}
+        <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -42,7 +52,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Hamburger */}
+        {/* ✅ Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(true)}
           className="md:hidden text-3xl text-gray-700"
@@ -52,7 +62,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Overlay */}
+      {/* ✅ Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -60,7 +70,7 @@ export default function Navbar() {
         onClick={() => setIsOpen(false)}
       ></div>
 
-      {/* Mobile Sidebar */}
+      {/* ✅ Mobile Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-xl z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -68,8 +78,14 @@ export default function Navbar() {
       >
         {/* Mobile Header */}
         <div className="flex justify-between items-center p-4 border-b">
-          <Link href="#" className="flex items-center space-x-2">
-            <span className="font-bold text-lg text-gray-800">ITAgency</span>
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src={logo}
+              alt="QueueSpaceIT Logo"
+              width={120}
+              height={60}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
           <button
             onClick={() => setIsOpen(false)}
