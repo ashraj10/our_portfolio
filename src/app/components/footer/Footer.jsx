@@ -68,7 +68,7 @@ const Footer = () => {
                 width={140}
                 height={140}
                 priority
-                className="w-auto object-contain hover:scale-105 transition-transform duration-300"
+                className="w-auto object-contain "
               />
             </Link>
 
