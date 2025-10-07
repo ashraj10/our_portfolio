@@ -1,6 +1,7 @@
 import About from "./components/about/About";
 import Feature from "./components/feature/Feature";
 import Footer from "./components/footer/Footer";
+import ContactComponent from "./components/home-contact-us/Contact";
 import Banner from "./components/home/Banner";
 import Projects from "./components/projects/Projects";
 import Service from "./components/service/Service";
@@ -13,8 +14,8 @@ export default function Home() {
       <Service />
       <About />
       <Feature />
-      <Stats />
-      <Projects />
+      {/* <Stats /> */}
+      <ContactComponent />
     </>
   );
 }
